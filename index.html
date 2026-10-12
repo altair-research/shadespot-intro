@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ShadeSpot 소개 — 지인 테스트 (2026-10-12)</title>
+<meta name="description" content="주차하기 전에 그 자리가 언제까지 그늘인지 알려 주는 무료 웹앱. 지인 테스트 안내.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="ShadeSpot — 주차하기 전에 그늘을 확인하세요">
+<meta property="og:description" content="자리를 탭하면 언제까지 그늘인지, 차를 어느 방향으로 둘지 알려 줍니다. 설치·가입 없음.">
+<!-- 원본은 다른 저장소에 있다. 이 저장소는 게시용 복사본이니 여기서 직접 고치지 말 것. -->
+<style>
+  :root{--primary:#0A57C2;--primary-bg:#E8F0FB;--on-primary-bg:#083A82;--ink:#101418;--ink-2:#4A5560;--bg:#FFFFFF;--sunken:#F2F4F6;--line:#DCE1E7;--sun:#F5C451;--shade:#9FB1C7;--warn-bg:#FFF6E0;--warn-ink:#6B4A00}
+  @media (prefers-color-scheme:dark){:root{--primary:#6EA8FF;--primary-bg:#14284A;--on-primary-bg:#CFE0FF;--ink:#ECEFF3;--ink-2:#A8B3BF;--bg:#0F1318;--sunken:#171C23;--line:#2A323C;--warn-bg:#2E2610;--warn-ink:#F3D58A}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:16px;word-break:keep-all}
+  .wrap{max-width:680px;margin:0 auto;padding:0 16px}
+  header{background:var(--sunken);padding:28px 0 32px}
+  .brand{font-weight:800;font-size:22px}.brand b{color:var(--primary)}
+  h1{font-size:28px;line-height:1.3;margin-top:14px;letter-spacing:-.3px}
+  .lead{color:var(--ink-2);margin-top:10px;font-size:17px}
+  .cta{display:flex;align-items:center;justify-content:center;min-height:56px;margin-top:22px;border-radius:14px;background:var(--primary);color:#fff;font-weight:700;font-size:18px;text-decoration:none}
+  @media (prefers-color-scheme:dark){.cta{color:#08142A}}
+  .meta{margin-top:10px;font-size:14px;color:var(--ink-2);text-align:center}
+  section{margin-top:36px}
+  h2{font-size:21px;line-height:1.35}
+  p,li{color:var(--ink-2)}
+  section>p{margin-top:8px}
+  ol.steps{list-style:none;counter-reset:s;margin-top:12px}
+  ol.steps li{counter-increment:s;position:relative;padding-left:40px;margin-top:14px}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:28px;height:28px;border-radius:50%;background:var(--primary-bg);color:var(--on-primary-bg);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+  ol.steps strong,dl strong{color:var(--ink)}
+  figure{margin-top:20px;text-align:center}
+  figure img{width:100%;max-width:320px;height:auto;border-radius:18px;border:1px solid var(--line)}
+  figcaption{font-size:14px;color:var(--ink-2);margin-top:8px}
+  dl{margin-top:12px;border-top:1px solid var(--line)}
+  dl div{display:grid;grid-template-columns:minmax(110px,40%) 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+  dt{font-weight:700;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;color:var(--ink)}
+  dd{color:var(--ink-2);font-size:15px}
+  .bar{display:inline-block;width:18px;height:10px;border-radius:3px;vertical-align:middle;margin-right:4px}
+  .bar.sun{background:var(--sun)}.bar.shade{background:repeating-linear-gradient(135deg,var(--shade) 0 3px,transparent 3px 6px);border:1px solid var(--shade)}
+  .note{background:var(--warn-bg);border-radius:14px;padding:16px 18px;margin-top:12px}
+  .note li{color:var(--warn-ink);margin-top:6px;margin-left:18px}
+  .note li:first-child{margin-top:0}
+  .ask{background:var(--primary-bg);border-radius:14px;padding:16px 18px;margin-top:12px}
+  .ask li{color:var(--on-primary-bg);margin-top:6px;margin-left:18px}
+  .ask li:first-child{margin-top:0}
+  ul.plain{margin-top:10px;margin-left:18px}
+  ul.plain li{margin-top:6px}
+  footer{border-top:1px solid var(--line);margin-top:44px;padding:22px 0 48px;font-size:13px;color:var(--ink-2)}
+  footer a,section a{color:var(--primary)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand"><b>Shade</b>Spot</div>
+    <h1>주차하기 전에,<br>그 자리가 언제까지 그늘인지</h1>
+    <p class="lead">지도에서 주차할 자리를 탭하면 <strong>몇 시까지 그늘인지</strong>, 차를 <strong>어느 방향으로 대면 햇빛을 덜 받는지</strong> 알려 주는 웹앱입니다. 지인분들께 먼저 써 봐 주십사 부탁드립니다.</p>
+    <a class="cta" href="https://shadespot.app/">ShadeSpot 열기</a>
+    <p class="meta">무료 · 설치 없음 · 가입 없음 · 폰 브라우저에서 바로</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>쓰는 법</h2>
+    <ol class="steps">
+      <li><strong>링크를 엽니다.</strong> 앱 설치 없이 사파리·크롬에서 바로 열립니다. 홈 화면에 추가해 두면 앱처럼 쓸 수 있어요.</li>
+      <li><strong>주차할 자리를 탭합니다.</strong> 지도를 손가락으로 옮기고 확대해서 실제 주차 칸 위를 누르세요.</li>
+      <li><strong>Parking time</strong>에서 머물 시간을 고릅니다(기본 1시간). 막대에 <span class="bar sun"></span>햇빛과 <span class="bar shade"></span>그늘 구간이 시간과 함께 나옵니다.</li>
+      <li><strong>Direction</strong> 그림을 봅니다. 파란 부채꼴 쪽으로 차 앞을 두면 앞유리에 햇빛이 덜 들어옵니다.</li>
+      <li>주차했으면 <strong>I parked here</strong>를 누르세요. 나중에 앱을 다시 열면 <strong>My parking</strong>에서 그동안 해가 얼마나 들었는지 보여 줍니다.</li>
+    </ol>
+    <figure>
+      <img src="screen.png" width="393" height="852" alt="ShadeSpot 화면: 지도에서 자리를 고르면 아래 카드에 Parking time 막대(1시간 40분 햇빛, 50분 그늘)와 Direction 그림, I parked here 버튼이 보인다">
+      <figcaption>자리를 탭했을 때 화면 (귀넷 카운티 도서관 근처 예시)</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>화면의 영어 단어</h2>
+    <dl>
+      <div><dt>Parking time</dt><dd>머물 시간. 막대를 끌어 15분 단위로 바꿉니다</dd></div>
+      <div><dt>Direction</dt><dd>차 앞을 둘 방향. <strong>Good range</strong>가 좋은 범위, 노란 점선 <strong>Sun movement</strong>가 해가 움직이는 길</dd></div>
+      <div><dt>I parked here</dt><dd>지금 주차한 자리를 이 폰에만 기록 (24시간)</dd></div>
+      <div><dt>My parking</dt><dd>기록한 주차 결과 보기 · <strong>End parking</strong>으로 기록 종료</dd></div>
+      <div><dt>Find shade</dt><dd>150m 안의 주차장 중 더 오래 그늘인 자리 찾기</dd></div>
+      <div><dt>⚑ (깃발)</dt><dd>“여기 틀렸어요” 제보</dd></div>
+      <div><dt>아래 시간 막대</dt><dd>다른 시각의 그림자 보기 · <strong>Now</strong>는 지금으로 돌아오기</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>미리 알아 두실 점</h2>
+    <div class="note">
+      <ul>
+        <li><strong>나무 그늘은 계산하지 않습니다.</strong> 건물 그림자만 봅니다. 앱이 “햇빛”이라 해도 실제로는 나무 그늘일 수 있어요.</li>
+        <li><strong>지도에 없는 건물은 그림자도 없습니다.</strong> 새로 지은 건물은 빠져 있을 수 있습니다.</li>
+        <li><strong>귀넷 카운티가 가장 정확합니다.</strong> 이곳 건물 높이는 항공 레이저 측량(LiDAR)으로 잰 값입니다. 다른 지역은 추정 높이가 섞여 있습니다.</li>
+        <li><strong>예상이지 보장이 아닙니다.</strong> 구름은 그늘 계산에 넣지 않고(흐린 날은 알림만), 건물 높이에는 오차가 있습니다. 차 안 온도도 계산하지 않습니다.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>부탁드리는 것</h2>
+    <div class="ask">
+      <ul>
+        <li>실제로 주차할 때 <strong>한두 번</strong> 써 봐 주세요.</li>
+        <li>앱 말과 실제가 달랐다면 그 자리에서 <strong>⚑ 깃발</strong>로 알려 주세요. 메모 한 줄이면 충분합니다.</li>
+        <li>헷갈렸던 화면, 처음 보고 이해가 안 됐던 단어가 있으면 카톡으로 편하게 알려 주세요. <strong>“이게 뭔지 몰랐다”가 제일 도움이 됩니다.</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>개인정보</h2>
+    <ul class="plain">
+      <li>계정·쿠키·광고가 없습니다. 누가 쓰는지 모릅니다.</li>
+      <li>사용 기록(화면 보기, 지도 탭)은 위치를 약 100m 단위로 뭉개서 저장합니다.</li>
+      <li>깃발로 제보하면 <strong>누른 자리의 정확한 좌표</strong>와 시각, 적은 메모가 저장됩니다. 내 위치나 기기 정보는 붙지 않습니다.</li>
+      <li>주차 기록(I parked here)은 내 폰에만 저장됩니다.</li>
+    </ul>
+    <p>자세히: <a href="https://shadespot.app/privacy">shadespot.app/privacy</a> (영문)</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    ShadeSpot 지인 테스트 안내 · 2026-10-12 · 문의 <a href="mailto:hello@shadespot.app">hello@shadespot.app</a>
+  </div>
+</footer>
+</body>
+</html>
